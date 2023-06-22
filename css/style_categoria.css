@@ -1,0 +1,65 @@
+/*categorias*/
+.icon-carrito{
+    width: 40px;
+    color: black;
+    height: 40px;
+}
+.img-categ{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: auto 1/1;
+}
+
+.encabezado-categ{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    color: black;
+
+}
+.info-producto {
+    text-decoration: none;
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+}
+.container-categorias{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+
+}
+.item-categorias{
+    border-radius: 10px;
+    padding-bottom: 20px;
+
+}
+.item-categorias :hover {
+    box-shadow: 0 10px 20px rgba( 0,0,0,0.20);  
+}
+.item-categorias button{
+    width: 100%;
+    height: 40px;
+    background: #107acc;
+    border: none;
+    color: black; 
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+@media (max-width:1358){
+    .encabezado-categ h1{
+        padding-top: 500px;
+    }
+}
+
+

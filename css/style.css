@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #d9d9d9;
+    color: #fff;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#107acc;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+}
+.dropdown-menu{
+    background-color: #107acc;
+    font-size: 19px;
+}
+.dropdown-menu a{
+    color: #fff;
+}
+.navbar{
+    height: 25%;
+    display: flex;
+    background-color: #107acc;
+}
+
+.logo-inicio{
+    margin-right: 3%;
+    border-radius: 50px;
+}
+
+#menu, 
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.img-bar{
+    width: 45px;
+    height: 35px;
+    background-color: white;
+}
+ 
+
+.pagina-inicio{
+    display: flex;
+    padding: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.hiden{
+    font-size: 19px;
+    padding: 15px;
+    background-color: #107acc ;
+    cursor: pointer;
+    display: none;
+}
+
+.carouselExampleFade{
+    width: 30%;
+    align-content: center;
+    padding-bottom: 600px;
+}
+#carouselExampleFade{
+    align-items: center;
+    width: 50%;
+    margin: 5% 25% 0 25%;
+}
+
+.carousel-item img {
+    align-content: center;  
+}
+
+.carousel-control-prev{
+    align-items: center;
+}
+
+
+.parrafo {
+    color: #000;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px ;
+}
+.img{
+    padding: 10px 20px;
+    width: 30%;
+}
+/*footer*/
+.pie {
+    background: rgb(88, 82, 82);
+    padding: 8px 15px 8px 10px;
+}
+.logopie2{
+    display: flex;
+    align-items: center;
+    text-decoration: none
+}
+
+.logopie2 p{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.redes{
+ text-decoration: none;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 10px;
+ color: #fff;
+ text-align: center;
+}
+
+.redes a{
+    align-items: center;
+}
+
+.copy{
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*footer*/
