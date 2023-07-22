@@ -148,6 +148,11 @@
     text-decoration: none;
 }
 
+.btn-add-cart{
+    color: white;
+    
+}
+
 /*categorias/productos*/
 .container-categorias{
     grid-template-columns: repeat(3, 1fr);
