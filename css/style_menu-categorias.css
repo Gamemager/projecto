@@ -186,8 +186,10 @@
 /*imagen*/
 .img-categ{
     width: 100%;
-    height: 600px;
-    border-radius: 8px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: auto 1/1;
 }
 
 
