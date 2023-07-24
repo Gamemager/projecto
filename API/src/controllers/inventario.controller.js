@@ -14,7 +14,7 @@ export const getInventario= async (req, res) => {
 export const getProducto = async(req, res) => {
     try{
         console.log (req.params.Id)
-        const [rows]= await pool.query('SELECT * FROM inventario WHERE Id= ?', [req.params.Id])
+        const [rows]= await pool.query('SELECT * FROM inventario WHERE id= ?', [req.params.id])
         if (rows.length <= 0) return res.status(404).json({
             message: 'Producto no encontrado'
         })
@@ -28,14 +28,15 @@ export const getProducto = async(req, res) => {
 }
 
 export const createProducto= async (req, res) => {
-    const {Precio, Modelo, Cantidad} =req.body
+    const {Precio, Modelo, Color, Descripción } =req.body
     try{
-        const [rows] = await pool.query('INSERT INTO inventario(Precio, Modelo, Cantidad) VALUES(?,?,?)', [Precio, Modelo, Cantidad, Id_tipoproducto]);
+        const [rows] = await pool.query('INSERT INTO inventario(Precio, Modelo, Color, Descripción) VALUES(?,?,?,?)', [Precio, Modelo, Color, Descripción]);
         res.send ({
-            Id_tipoproducto: rows.insertId,
+            id: rows.insertId,
             Precio,
             Modelo,
-            Cantidad 
+            Color,
+            Descripción
         })
 
     }catch (error) {
@@ -48,7 +49,7 @@ export const createProducto= async (req, res) => {
 
 export const deleteProducto= async (req, res) => {
     try{
-        const [resuld] = await pool.query ('DELETE FROM inventario WHERE Id=?', [req.params.Id])
+        const [resuld] = await pool.query ('DELETE FROM inventario WHERE id=?', [req.params.id])
         
         if (resuld.affectedRows <= 0) return res.status(404).json({
             message: 'Producto no Encontrado'
@@ -64,17 +65,17 @@ export const deleteProducto= async (req, res) => {
 }
 
 export const updateProducto= async (req, res) => {
-    const {Id_tipoproducto}= req.params
-    const {Precio, Modelo, Cantidad } =req.body
+    const {id}= req.params
+    const {Precio, Modelo, Color, Descripción } =req.body
    
     try{
-        const [resuld]= await pool.query( 'UPDATE inventario SET Precio = IFNULL(?, Precio), Modelo= IFNULL(?,Modelo), Cantidad= IFNULL(?,Cantidad) WHERE Id_tipoproducto = ?', [Precio,Modelo, Cantidad, Id_tipoproducto])
+        const [resuld]= await pool.query( 'UPDATE inventario SET Precio = IFNULL(?, Precio), Modelo= IFNULL(?,Modelo), Color= IFNULL(?,Color), Descripción= IFNULL(?,Descripción) WHERE id = ?', [Precio,Modelo, Color, Descripción, id])
         console.log(resuld)
     
         if (resuld.affectedRows ===0) return res.status(404).json ({
             message: 'Producto no Encontrado'
         })
-        const [rows]= await pool.query ('SELECT * FROM inventario WHERE Id_tipoproducto = ?', [Id_tipoproducto])
+        const [rows]= await pool.query ('SELECT * FROM inventario WHERE id = ?', [id])
         res.json(rows[0])
         
     }catch (error) {
