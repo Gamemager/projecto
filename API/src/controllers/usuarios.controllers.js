@@ -30,7 +30,7 @@ export const getUsuario = async(req, res) => {
 export const createUsuarios= async (req, res) => {
     const {Full_name, DOB, Usuario, Password, Tipo_usuario} =req.body
     try{
-        const [rows] = await pool.query('INSERT INTO usuarios(Full_name, DOB,Usuario,Password, Tipo_usuario) VALUES(?,?,?,?,?)', [Full_name, DOB,Usuario,Password, Tipo_usuario, Id]);
+        const [rows] = await pool.query('INSERT INTO usuarios(Full_name, DOB,Usuario,Password, Tipo_usuario) VALUES(?,?,?,?,?)', [Full_name, DOB,Usuario,Password, Tipo_usuario]);
         res.send ({
             Id: rows.insertId,
             Full_name, 
