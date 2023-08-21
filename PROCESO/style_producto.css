@@ -1,8 +1,14 @@
 .container{
     padding: 40px;
     color: black;
+
 }
 .img-produc{
     border-radius: 5%;
+    padding-left: 10px;
 
+}
+.col-md-6 h2{
+ padding-top: 20px;
+  
 }
