@@ -5,12 +5,12 @@ import { getInventario ,createProducto, updateProducto, deleteProducto, getProdu
 
 router.get ('/inventario', getInventario);
 
-router.get ('/inventario/:Id', getProducto);
+router.get ('/inventario/:id', getProducto);
 
 router.post ('/inventario', createProducto);
 
-router.patch ('/inventario/:Id', updateProducto);
+router.patch ('/inventario/:id', updateProducto);
 
-router.delete ('/inventario/:Id', deleteProducto);
+router.delete ('/inventario/:id', deleteProducto);
 
 export default router
