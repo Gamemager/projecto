@@ -8,7 +8,7 @@ import cors from 'cors'
 const app =express();
 
 
-//const WhiteList= ['http://localhost:4200']
+const WhiteList= ['http://localhost:4200']
 app.use(express.json());
 app.use(cors());
 
