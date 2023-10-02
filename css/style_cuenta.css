@@ -1,0 +1,165 @@
+.ImagenCuenta{
+    width: 30px;
+}
+.tittle{
+    background-color: white;
+    padding: 15px;
+    padding-left: 30px;
+    border-radius: 15px;
+}
+
+.profile_cont{
+    position: relative;
+    padding-left: 150px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.ProfileContent{
+    background-color: white;
+    padding: 15px;
+    padding-top: 30px;
+    padding-left: 30px;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.profileContentItem{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+.profileContentItem a{
+    color: black;
+    text-decoration: none;
+}
+
+.opcion_cuenta{
+    position: relative;
+    padding: 40px 20px 100px 5px;
+    width: 150px;
+    height: 100%;
+    background-color: white;
+    text-decoration: solid;
+}
+
+.img_configuracion{
+    width: 50px;
+    cursor: pointer;
+}
+.img_cambio{
+    width: 50px;
+    cursor: pointer;
+}
+.img_compras{
+    width: 50px;
+    cursor: pointer;
+}
+.img_cerrar{
+    width: 30px;
+    cursor: pointer;
+}
+
+.profileOption{
+    padding: 15px;
+    border-bottom: 1px solid;
+}
+
+.opcion_cuenta a{
+    color: white;
+    text-decoration: none;
+}
+ 
+
+.opcion_cuenta h3{
+    text-align: center;
+    border-bottom: 1px solid ;
+    padding-bottom: 15px;
+}
+
+
+.tool-tip-container{
+    width: 120px;
+    margin-left: 10px;
+    margin-top: -500px;
+    margin-bottom: 50px;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0px 3px 29px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding:1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+
+.tool-container{
+    position: relative;
+    width: calc(120px - 2rem);
+    height: calc(120px - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin: 0.5rem 0;
+    border-radius: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+.tool-container:hover{
+    background-color: #107acc;
+}
+
+.tool-container:hover .icon{
+    filter: invert(1);
+}
+
+.tool-container:hover .text-container{
+    opacity: 1;
+}
+
+.icon{
+    height: 45%;
+    transition: all 0.5s;
+}
+
+.text-container{
+    position: absolute;
+    height: 60%;
+    width: fit-content;
+    padding: 0 3rem;
+    font-size: 20px;
+    font-weight: 500;
+    box-sizing: border-box;
+    background-color: white;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 60px;
+    box-shadow: 0px 3px 29px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.text{
+    color: black;
+}
+
+
+
+
+
+
+
