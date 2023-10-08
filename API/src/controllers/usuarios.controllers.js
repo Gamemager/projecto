@@ -1,4 +1,6 @@
+import moment from "moment";
 import { pool } from "../db.js";
+import router from "../routes/usuarios.routes.js";
 
 export const getUsuarios= async (req, res) => {
     try{
@@ -88,4 +90,25 @@ export const updateUsuarios= async (req, res) => {
     }
 
 }
+
+const createToken = (user) =>{
+    let payload= {
+        UsuarioId: Usuario.Id,
+        createAt: moment().unix(),
+        expiresAt: moment().add(1,'day').unix()
+    }
+    return jwt.encode(payload,process.env.TOKEN_KEY);
+}
+
+/*router.use(middleware.checkToken)
+
+router.get('/mainUser', (req, res)=>{
+    getUsuario (req.UsuarioId)
+    .then(rows =>{
+        res.json(rows);
+    })
+    .catch (err => console.log (err));
+});
+
+export default router */
 

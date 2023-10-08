@@ -5,6 +5,7 @@ import usuariosRoutes from './routes/usuarios.routes.js'
 import inventarioRoutes from './routes/inventario.routes.js'
 import {PORT} from './config.js' 
 import cors from 'cors'
+import { configDotenv } from 'dotenv';
 const app =express();
 
 
